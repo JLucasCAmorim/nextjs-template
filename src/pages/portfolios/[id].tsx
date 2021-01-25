@@ -1,6 +1,5 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
-import BaseLayout from '../../components/layouts'
 
 interface IPost {
   userId: number
@@ -15,10 +14,10 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({ post }: PortfolioProps) => {
   return (
-    <BaseLayout>
+    <>
       <h1>Title: {post.title}</h1>
       <p>Body: {post.body}</p>
-    </BaseLayout>
+    </>
   )
 }
 

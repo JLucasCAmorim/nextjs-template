@@ -34,5 +34,13 @@
       "error"
     ],
     "comma-dangle": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "babel-plugin-root-import": {
+        "rootPathSuffix": "src"
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Container } from '../styles/pages/Portifolios'
-import BaseLayout from '../components/layouts'
+
 import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 
@@ -29,17 +29,15 @@ const Portfolios: React.FC<PortfoliosProps> = ({ posts }: PortfoliosProps) => {
   }
 
   return (
-    <BaseLayout>
-      <Container>
-        <Head>
-          <title>Portifolio</title>
-        </Head>
+    <Container>
+      <Head>
+        <title>Portifolio</title>
+      </Head>
 
-        <h1>Im Portifolio page</h1>
+      <h1>Im Portifolio page</h1>
 
-        <ul>{renderPosts(posts)}</ul>
-      </Container>
-    </BaseLayout>
+      <ul>{renderPosts(posts)}</ul>
+    </Container>
   )
 }
 

@@ -9,13 +9,16 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
-    font: 400 16px Roboto, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    font: "Nunito Sans", -apple-systewm, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .navbar-brand-custom {
     font-family: 'Anton', sans-serif;
-    color: #EE673A !important;
-    border: 2px solid #EE673A !important;
+    color: white !important;
+    border: 2px solid white !important;
     padding: 5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -30,7 +33,7 @@ export default createGlobalStyle`
 
   // Index -----------
   .cover {
-    background-image: linear-gradient(45deg,#EE673A 0%,#ffb74d 100%);
+    background-color: #fff;
     overflow: hidden;
     position: relative;
   }
@@ -145,43 +148,23 @@ export default createGlobalStyle`
     box-shadow: -17px 13px 41px rgba(13,78,158,0.3);
   }
 
-  // Header
-
-  .port-navbar.port-default {
+  .scrolled {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background-color: #081123 !important;
     width: 100%;
-    z-index: 15;
-    padding: 40px;
-
-    .port-navbar {
-      &-brand {
-        color: white;
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: bold;
-
-        &-item {
-          margin-left: 10px;
-          margin-right: 10px;
-        }
-
-        &-link{
-          color: white;
-          font-weight: bold;
-          letter-spacing: 0.8px;
-          font-size: 18px;
-          text-transform: uppercase;
-
-          &.active {
-            color: #dba919;
-          }
-
-          &:hover, &:focus {
-            color: #dba919;
-          }
-        }
-      }
-    }
+    z-index: 999;
+    padding: .5rem 1rem;
   }
 
+  .bg-black {
+    background-color: #121214;
+  }
+
+  .ctf-hire-img-content {
+    @media (max-width: ${props => props.theme.mediaSizes.smMaxWidth}) {
+      order: -1;
+    }
+  }
 `
